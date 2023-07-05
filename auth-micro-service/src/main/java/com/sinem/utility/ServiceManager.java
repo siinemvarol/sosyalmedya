@@ -1,4 +1,4 @@
-package com.sinem.hastanerandevu.utility;
+package com.sinem.utility;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

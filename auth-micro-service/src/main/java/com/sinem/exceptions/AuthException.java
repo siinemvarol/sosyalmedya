@@ -1,4 +1,4 @@
-package com.sinem.hastanerandevu.exceptions;
+package com.sinem.exceptions;
 
 import lombok.Getter;
 
@@ -13,15 +13,15 @@ import lombok.Getter;
  */
 
 @Getter
-public class HastaneRandevuException extends RuntimeException {
+public class AuthException extends RuntimeException {
 
     private final ErrorType errorType;
-    public HastaneRandevuException(ErrorType errorType){
+    public AuthException(ErrorType errorType){
         super(errorType.getMessage());
         this.errorType = errorType;
     }
 
-    public HastaneRandevuException(ErrorType errorType, String message){
+    public AuthException(ErrorType errorType, String message){
         super(message);
         this.errorType = errorType;
     }

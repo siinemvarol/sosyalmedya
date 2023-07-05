@@ -1,19 +1,50 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '3.1.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'application'
 }
 
-group 'com.sinem'
-version '1.0-SNAPSHOT'
+allprojects {
+    apply plugin : 'java'
+    apply plugin : 'org.springframework.boot'
+    apply plugin : 'io.spring.dependency-management'
+    apply plugin : 'application'
+    apply plugin : 'java-library'
 
-repositories {
-    mavenCentral()
+    apply from : "${rootDir}/dependencies.gradle"
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+subprojects {
+    group 'com.sinem'
+    version '1.0-SNAPSHOT'
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
-test {
-    useJUnitPlatform()
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+    }
+    buildscript {
+        repositories {
+            mavenCentral()
+            google()
+        }
+    }
+    dependencies {
+        implementation libs.springBootWeb
+        implementation libs.lombok
+        annotationProcessor libs.lombok
+        implementation libs.swaggerui
+        testImplementation (platform ("org.junit:junit-bom:5.9.1"))
+        testImplementation("org.junit.jupiter:junit-jupiter")
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom()
+    }
 }

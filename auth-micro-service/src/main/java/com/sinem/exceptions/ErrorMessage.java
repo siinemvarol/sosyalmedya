@@ -1,4 +1,4 @@
-package com.sinem.hastanerandevu.exceptions;
+package com.sinem.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

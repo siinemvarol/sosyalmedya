@@ -1,0 +1,18 @@
+ext {
+    versions = [
+            springBoot: "3.1.1",
+            lombok    : "1.18.26",
+            swaggerui : "2.1.0"
+
+    ]
+
+    libs = [
+
+            springBootWeb: "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
+            springDataJpa: "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
+            lombok       : "org.projectlombok:lombok:${versions.lombok}",
+            swaggerui    : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.swaggerui}"
+
+
+    ]
+}

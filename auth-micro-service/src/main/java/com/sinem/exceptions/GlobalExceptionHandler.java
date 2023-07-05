@@ -1,4 +1,4 @@
-package com.sinem.hastanerandevu.exceptions;
+package com.sinem.exceptions;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,9 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.sinem.hastanerandevu.exceptions.ErrorType.*;
+import static com.sinem.exceptions.ErrorType.BAD_REQUEST_ERROR;
+import static com.sinem.exceptions.ErrorType.REGISTER_KULLANICIADI_KAYITLI;
+
 
 @ControllerAdvice
 @Slf4j  // loglama icin
@@ -26,9 +28,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorMessage> hatalariYakalayanBenim(Exception ex){
         return new ResponseEntity<>(createErrorMessage(ex, ErrorType.INTERNAL_SERVER_ERROR), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-    @ExceptionHandler(HastaneRandevuException.class)
+    @ExceptionHandler(AuthException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMessage> Java8StartExceptionHandler(HastaneRandevuException ex){
+    public ResponseEntity<ErrorMessage> Java8StartExceptionHandler(AuthException ex){
         return new ResponseEntity<>(createErrorMessage(ex, ex.getErrorType()), ex.getErrorType().getHttpStatus());
     }
 

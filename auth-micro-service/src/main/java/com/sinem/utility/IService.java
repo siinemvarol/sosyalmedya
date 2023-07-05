@@ -1,4 +1,4 @@
-package com.sinem.hastanerandevu.utility;
+package com.sinem.utility;
 
 import java.util.List;
 import java.util.Optional;
