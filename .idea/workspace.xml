@@ -4,35 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa32075a-ffe5-4405-9ab8-46db176dd14b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/AuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/exceptions/AuthException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/exceptions/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/exceptions/ErrorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/exceptions/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/utility/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/utility/ServiceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dependencies.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-micro-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-micro-service/src/main/java/com/sinem/PostApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-micro-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-micro-service/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/UserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-micro-service/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="fa32075a-ffe5-4405-9ab8-46db176dd14b" name="Changes" comment="First commit">
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/constants/RestApis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/dto/request/DoLoginRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/dto/request/DoRegisterRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/dto/response/DoLoginResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/dto/response/DoRegisterResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/mapper/IAuthMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/repository/IAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/repository/entity/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-micro-service/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/auth-micro-service/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/exceptions/ErrorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/exceptions/ErrorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-micro-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-micro-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-micro-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-micro-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +57,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -99,6 +89,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;997d2073be8d7700cbcdacdde6cac81a&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -115,7 +106,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="Spring Boot.AuthApplication">
     <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="sosyalmedya.auth-micro-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinem.AuthApplication" />
@@ -157,9 +148,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.PostApplication" />
-        <item itemvalue="Spring Boot.AuthApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -173,10 +164,25 @@
       <updated>1688539870567</updated>
       <workItem from="1688539871473" duration="7444000" />
       <workItem from="1688553180671" duration="4000" />
+      <workItem from="1688584950085" duration="1289000" />
+      <workItem from="1688623521173" duration="10042000" />
+      <workItem from="1688641342535" duration="638000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1688585070202</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688585070202</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
   </component>
 </project>

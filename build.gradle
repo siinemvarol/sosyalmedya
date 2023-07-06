@@ -38,6 +38,8 @@ allprojects {
         implementation libs.lombok
         annotationProcessor libs.lombok
         implementation libs.swaggerui
+        implementation libs.mapstruct
+        annotationProcessor libs.mapstructProcessor
         testImplementation (platform ("org.junit:junit-bom:5.9.1"))
         testImplementation("org.junit.jupiter:junit-jupiter")
     }

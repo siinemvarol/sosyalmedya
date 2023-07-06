@@ -1,18 +1,23 @@
 ext {
     versions = [
-            springBoot: "3.1.1",
-            lombok    : "1.18.26",
-            swaggerui : "2.1.0"
+            springBoot        : "3.1.1",
+            lombok            : "1.18.26",
+            swaggerui         : "2.1.0",
+            postgresql        : "42.6.0",
+            hibernateValidator: "8.0.0.Final",
+            mapstruct         : "1.5.5.Final"
 
     ]
 
     libs = [
 
-            springBootWeb: "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
-            springDataJpa: "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
-            lombok       : "org.projectlombok:lombok:${versions.lombok}",
-            swaggerui    : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.swaggerui}"
-
-
+            springBootWeb     : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
+            springDataJpa     : "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
+            lombok            : "org.projectlombok:lombok:${versions.lombok}",
+            swaggerui         : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.swaggerui}",
+            postgresql        : "org.postgresql:postgresql:${versions.postgresql}",
+            hibernateValidator: "org.hibernate.validator:hibernate-validator:${versions.hibernateValidator}",
+            mapstruct         : "org.mapstruct:mapstruct:${versions.mapstruct}",
+            mapstructProcessor: "org.mapstruct:mapstruct-processor:${versions.mapstruct}"
     ]
 }
