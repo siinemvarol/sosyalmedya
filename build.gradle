@@ -40,6 +40,11 @@ allprojects {
         implementation libs.swaggerui
         implementation libs.mapstruct
         annotationProcessor libs.mapstructProcessor
+        implementation libs.springCloudFeign
+        implementation libs.springCloudStarterSleuth
+        implementation libs.springCloudSleuthZipkin
+
+
         testImplementation (platform ("org.junit:junit-bom:5.9.1"))
         testImplementation("org.junit.jupiter:junit-jupiter")
     }

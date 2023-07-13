@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/siinemvarol/java8configrepo.git"
+          default-label: main
+          skip-ssl-validation: true
+          username: siinemvarol
+          password: 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

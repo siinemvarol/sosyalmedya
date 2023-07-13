@@ -1,6 +1,8 @@
 ext {
     versions = [
             springBoot        : "3.1.1",
+            springCloud       : "4.0.3",
+            springSleuth      : "3.1.9",
             lombok            : "1.18.26",
             swaggerui         : "2.1.0",
             postgresql        : "42.6.0",
@@ -11,13 +13,25 @@ ext {
 
     libs = [
 
-            springBootWeb     : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
-            springDataJpa     : "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
-            lombok            : "org.projectlombok:lombok:${versions.lombok}",
-            swaggerui         : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.swaggerui}",
-            postgresql        : "org.postgresql:postgresql:${versions.postgresql}",
-            hibernateValidator: "org.hibernate.validator:hibernate-validator:${versions.hibernateValidator}",
-            mapstruct         : "org.mapstruct:mapstruct:${versions.mapstruct}",
-            mapstructProcessor: "org.mapstruct:mapstruct-processor:${versions.mapstruct}"
+            springBootWeb           : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
+            springDataJpa           : "org.springframework.boot:spring-boot-starter-data-jpa:${versions.springBoot}",
+            springDataMongodb       : "org.springframework.boot:spring-boot-starter-data-mongodb:${versions.springBoot}",
+            // Spring Cloud Bağımlılıkları
+            springCloudFeign        : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
+            springCloudConfigServer : "org.springframework.cloud:spring-cloud-config-server:${versions.springCloud}",
+            springCloudConfigClient : "org.springframework.cloud:spring-cloud-config-client:${versions.springCloud}",
+            springCloudConfig       : "org.springframework.cloud:spring-cloud-starter-config:${versions.springCloud}",
+            // Spring Zipkin Bağımlılıkları
+            springCloudStarterSleuth: "org.springframework.cloud:spring-cloud-starter-sleuth:${versions.springSleuth}",
+            springCloudSleuthZipkin : "org.springframework.cloud:spring-cloud-sleuth-zipkin:${versions.springSleuth}",
+            // RabbitMQ Bağımlılıkları
+            springBootAmqp : "org.springframework.boot:spring-boot-starter-amqp:${versions.springBoot}",
+
+            lombok                  : "org.projectlombok:lombok:${versions.lombok}",
+            swaggerui               : "org.springdoc:springdoc-openapi-starter-webmvc-ui:${versions.swaggerui}",
+            postgresql              : "org.postgresql:postgresql:${versions.postgresql}",
+            hibernateValidator      : "org.hibernate.validator:hibernate-validator:${versions.hibernateValidator}",
+            mapstruct               : "org.mapstruct:mapstruct:${versions.mapstruct}",
+            mapstructProcessor      : "org.mapstruct:mapstruct-processor:${versions.mapstruct}"
     ]
 }

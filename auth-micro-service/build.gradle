@@ -7,6 +7,10 @@ buildscript {
 dependencies {
     implementation libs.springDataJpa
     implementation libs.postgresql
+    implementation libs.springCloudConfigClient
+    implementation libs.springCloudConfig
+    implementation libs.springBootAmqp
+
     implementation libs.hibernateValidator
     implementation 'org.jetbrains:annotations:23.0.0'
 }

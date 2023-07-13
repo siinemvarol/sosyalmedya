@@ -2,4 +2,6 @@ rootProject.name = 'sosyalmedya'
 include 'auth-micro-service'
 include 'user-micro-service'
 include 'post-micro-service'
+include 'config-server'
+include 'config-server-git'
 
