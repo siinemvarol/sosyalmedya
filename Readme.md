@@ -34,3 +34,19 @@
     http://localhost:15672/
     - RabbitMQ'ya java icinden baglanmak icin asagidaki linki kullanabilirsiniz.
     http://localhost:5672/
+
+# PROJENIN DEPLOY ADIMLARI
+    1 - Uygulamanin gradle ile build edilmesi gereklidir.
+        1.1 - Sag taraftan gradle sekmesine tiklayin
+        1.2 - Coklu yapi oldugu icin projenin adini secin "config-server-git"
+        1.3 - Tasks>build>build cift tiklayip projeyi olusturun
+        1.4 - Tasks>build>buildDependents cift tiklayin
+    2 - Bu islemden sonra proje dosyasinin altinda olusan build klasorunun icindeki
+        libs klasorunun icine projenizin jar dosyasi eklenmis olur. Bu dosya
+        direkt calistirilabilir bir dosyadir.
+    3 - Dockerfile olusturuyoruz.
+    4 - console (Terminal) ekranindan bu dockerfile ile imaji olusturuyoruz.
+        docker build -t configservergit .       -> DIKKAT: bu imaji buluta atmak icin, repo adini kullanin
+        docker build -t siinemvarol/java8configservergit:v01 .
+    5 - docker build -t siinemvarol/java8authservice:v01 .
+

@@ -4,14 +4,13 @@ import com.sinem.dto.request.DoLoginRequestDto;
 import com.sinem.dto.request.DoRegisterRequestDto;
 import com.sinem.dto.response.DoLoginResponseDto;
 import com.sinem.dto.response.DoRegisterResponseDto;
+import com.sinem.rabbitmq.model.CreateProfile;
+import com.sinem.rabbitmq.producer.CreateProfileProducer;
 import com.sinem.service.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static com.sinem.constants.RestApis.*;
 
@@ -20,6 +19,18 @@ import static com.sinem.constants.RestApis.*;
 @RequiredArgsConstructor
 public class AuthController {
     private final AuthService authService;
+    private final CreateProfileProducer createProfileProducer;
+    @GetMapping("/testrabbit")
+    public ResponseEntity<Void> testRabbitSendMessage(String username, String email, Long authId){
+        createProfileProducer.sendCreateProfileMessage(
+                CreateProfile.builder()
+                        .authId(authId)
+                        .email(email)
+                        .username(username)
+                        .build()
+        );
+        return ResponseEntity.ok().build();
+    }
 
     @PostMapping(LOGIN)
     public ResponseEntity<DoLoginResponseDto> doLogin(@RequestBody @Valid DoLoginRequestDto dto){

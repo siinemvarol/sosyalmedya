@@ -7,6 +7,8 @@ import com.sinem.exceptions.AuthException;
 import com.sinem.exceptions.ErrorType;
 import com.sinem.manager.IUserManager;
 import com.sinem.mapper.IAuthMapper;
+import com.sinem.rabbitmq.model.CreateProfile;
+import com.sinem.rabbitmq.producer.CreateProfileProducer;
 import com.sinem.repository.IAuthRepository;
 import com.sinem.repository.entity.Auth;
 import com.sinem.utility.ServiceManager;
@@ -18,11 +20,13 @@ import java.util.Optional;
 public class AuthService extends ServiceManager<Auth, Long> {
     private final IAuthRepository authRepository;
     private final IUserManager userManager;
+    private final CreateProfileProducer createProfileProducer;
 
-    public AuthService(IAuthRepository authRepository, IUserManager userManager) {
+    public AuthService(IAuthRepository authRepository, IUserManager userManager, CreateProfileProducer createProfileProducer) {
         super(authRepository);
         this.authRepository = authRepository;
         this.userManager = userManager;
+        this.createProfileProducer = createProfileProducer;
     }
 
     /**
@@ -78,11 +82,27 @@ public class AuthService extends ServiceManager<Auth, Long> {
          * Auth servis kullaniciyi kayit ettikten sonra user microserviceine kullanici profili
          * olusturulmak uzere bilgi gonderir.
          */
-        userManager.save(UserSaveRequestDto.builder()
-                .authid(auth.getId())
-                .email(dto.getEmail())
+
+        /**
+         *  DİKKAT !!!
+         *  Auth service ile user service arasında tutarlılık gerektiren bir bağlantı vardır. Bu nedenle
+         *  auth bir veriyi kayıt ettiğinde mutlaka user service'te de oluşmalıdır. İşte bu nedenle
+         *  tutarlılığı korumak adına P2P FeignClient kullanmak yerine RabbitMQ kullanılmıştır.
+         */
+
+        /**
+         *   userManager.save(UserSaveRequestDto.builder()
+         *                 .authid(auth.getId())
+         *                 .email(dto.getEmail())
+         *                 .username(dto.getUsername())
+         *                 .build());
+         */
+        createProfileProducer.sendCreateProfileMessage(CreateProfile.builder()
+                .authId(auth.getId())
                 .username(dto.getUsername())
+                .email(dto.getEmail())
                 .build());
+
         return true;
     }
 }
