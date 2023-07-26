@@ -2,7 +2,6 @@ package com.sinem.service;
 
 import com.sinem.dto.request.DoLoginRequestDto;
 import com.sinem.dto.request.DoRegisterRequestDto;
-import com.sinem.dto.request.UserSaveRequestDto;
 import com.sinem.exceptions.AuthException;
 import com.sinem.exceptions.ErrorType;
 import com.sinem.manager.IUserManager;
@@ -11,6 +10,7 @@ import com.sinem.rabbitmq.model.CreateProfile;
 import com.sinem.rabbitmq.producer.CreateProfileProducer;
 import com.sinem.repository.IAuthRepository;
 import com.sinem.repository.entity.Auth;
+import com.sinem.utility.JwtTokenManager;
 import com.sinem.utility.ServiceManager;
 import org.springframework.stereotype.Service;
 
@@ -20,12 +20,14 @@ import java.util.Optional;
 public class AuthService extends ServiceManager<Auth, Long> {
     private final IAuthRepository authRepository;
     private final IUserManager userManager;
+    private final JwtTokenManager jwtTokenManager;
     private final CreateProfileProducer createProfileProducer;
 
-    public AuthService(IAuthRepository authRepository, IUserManager userManager, CreateProfileProducer createProfileProducer) {
+    public AuthService(IAuthRepository authRepository, IUserManager userManager, JwtTokenManager jwtTokenManager, CreateProfileProducer createProfileProducer) {
         super(authRepository);
         this.authRepository = authRepository;
         this.userManager = userManager;
+        this.jwtTokenManager = jwtTokenManager;
         this.createProfileProducer = createProfileProducer;
     }
 
@@ -39,7 +41,7 @@ public class AuthService extends ServiceManager<Auth, Long> {
      * - Giriste sorun olursa sorun bilgisi DTO olarak dondurulecek
      */
 
-    public Boolean login(DoLoginRequestDto dto) {
+    public String login(DoLoginRequestDto dto) {
         Optional<Auth> auth = authRepository.findOptionalByUsernameAndPassword(dto.getUsername(), dto.getPassword());
         /**
          * DİKKAT!!! burada iki yolumuz var;
@@ -53,7 +55,11 @@ public class AuthService extends ServiceManager<Auth, Long> {
         if (auth.isEmpty()) {
             throw new AuthException(ErrorType.DOLOGIN_INVALID_USERNAME_PASSWORD);
         }
-        return true;
+        Optional<String> token = jwtTokenManager.createToken(auth.get().getId());
+        if(token.isEmpty()){
+            throw new AuthException(ErrorType.INVALID_TOKEN);
+        }
+        return token.get();
     }
 
     public Optional<Auth> loginAlternatif(DoLoginRequestDto dto) {

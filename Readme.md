@@ -49,4 +49,6 @@
         docker build -t configservergit .       -> DIKKAT: bu imaji buluta atmak icin, repo adini kullanin
         docker build -t siinemvarol/java8configservergit:v01 .
     5 - docker build -t siinemvarol/java8authservice:v01 .
+    6 - docker build -t siinemvarol/java8userservice:v01 .
+        docker build -t siinemvarol/java8gatewayservice:v01 .
 

@@ -41,6 +41,7 @@ allprojects {
         implementation libs.mapstruct
         annotationProcessor libs.mapstructProcessor
         implementation libs.springCloudFeign
+        implementation libs.auth0
     //    implementation libs.springCloudStarterSleuth
     //    implementation libs.springCloudSleuthZipkin
 

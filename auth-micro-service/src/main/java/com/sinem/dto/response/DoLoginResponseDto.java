@@ -16,4 +16,5 @@ public class DoLoginResponseDto {
      */
     Integer status;
     String result;
+    String token;   // JWT token
 }

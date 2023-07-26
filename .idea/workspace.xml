@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa32075a-ffe5-4405-9ab8-46db176dd14b" name="Changes" comment="13.07.2023">
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/config/rabbit/RabbitConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server-git/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/config/rabbit/RabbitConfig.java" afterDir="false" />
+    <list default="true" id="fa32075a-ffe5-4405-9ab8-46db176dd14b" name="Changes" comment="21.07.2023">
+      <change afterPath="$PROJECT_DIR$/api-gateway-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway-service/src/main/java/com/sinem/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway-service/src/main/java/com/sinem/controller/FallbackController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/utility/JwtTokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-repo/gateway-application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-micro-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/utility/JwtTokenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/dto/response/DoLoginResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/dto/response/DoLoginResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-micro-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-micro-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server-git/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server-git/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-repo/user-application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-repo/user-application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/rabbitmq/consumer/CreateProfileConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/rabbitmq/consumer/CreateProfileConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependencies.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-micro-service/src/main/java/com/sinem/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-micro-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-micro-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +49,12 @@
         <task path="$PROJECT_DIR$/auth-micro-service">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/user-micro-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/api-gateway-service">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -51,18 +65,18 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="sosyalmedya" type="f1a62948:ProjectNode" />
-                <item name="auth-micro-service" type="2d1252cf:ModuleNode" />
+                <item name="api-gateway-service" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="sosyalmedya" type="f1a62948:ProjectNode" />
-                <item name="auth-micro-service" type="2d1252cf:ModuleNode" />
+                <item name="api-gateway-service" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="sosyalmedya" type="f1a62948:ProjectNode" />
-                <item name="auth-micro-service" type="2d1252cf:ModuleNode" />
+                <item name="api-gateway-service" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -104,25 +118,29 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/BOOST_JAVA_8/SPRING/sosyalmedya/auth-micro-service&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/BOOST_JAVA_8/SPRING/sosyalmedya/api-gateway-service&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1bdbe1ce6d1488eb1bdba74e15f0e130&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;2e14006d58a3354c50d9ca298994ad11&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\api-gateway-service" />
+      <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\config-server\src\main\resources\config-repo" />
+      <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\user-micro-service" />
       <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\auth-micro-service" />
       <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\user-micro-service\src\main\java\com\sinem\config" />
-      <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\user-micro-service\src\main\java\com\sinem\rabbitmq" />
-      <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\config-server\src\main\resources\config-repo" />
-      <recent name="C:\BOOST_JAVA_8\SPRING\sosyalmedya\user-micro-service\src\main\java\com\sinem" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sinem.utility" />
       <recent name="com.sinem.dto.response" />
       <recent name="com.sinem.dto.request" />
     </key>
@@ -134,7 +152,49 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.sosyalmedya:auth-micro-service [buildDependents]">
+  <component name="RunManager" selected="Gradle.sosyalmedya:api-gateway-service [buildDependents]">
+    <configuration name="sosyalmedya:api-gateway-service [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildDependents" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="sosyalmedya:api-gateway-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/api-gateway-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="sosyalmedya:auth-micro-service [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -156,31 +216,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="sosyalmedya:auth-micro-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="sosyalmedya:user-micro-service [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/auth-micro-service" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="sosyalmedya:config-server-git [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/config-server-git" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/user-micro-service" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -198,10 +237,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="sosyalmedya:config-server-git [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="sosyalmedya:user-micro-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/config-server-git" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/user-micro-service" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -219,6 +258,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="sosyalmedya.auth-micro-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinem.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="sosyalmedya.config-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinem.ConfigServerApplication" />
@@ -233,26 +279,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="sosyalmedya.api-gateway-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinem.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="sosyalmedya.post-micro-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinem.PostApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="sosyalmedya.user-micro-service.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinem.UserApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sinem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.sosyalmedya:api-gateway-service [buildDependents]" />
+        <item itemvalue="Gradle.sosyalmedya:api-gateway-service [build]" />
+        <item itemvalue="Gradle.sosyalmedya:user-micro-service [buildDependents]" />
+        <item itemvalue="Gradle.sosyalmedya:user-micro-service [build]" />
         <item itemvalue="Gradle.sosyalmedya:auth-micro-service [buildDependents]" />
-        <item itemvalue="Gradle.sosyalmedya:auth-micro-service [build]" />
-        <item itemvalue="Gradle.sosyalmedya:config-server-git [buildDependents]" />
-        <item itemvalue="Gradle.sosyalmedya:config-server-git [build]" />
-        <item itemvalue="Spring Boot.UserApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -290,6 +344,12 @@
       <workItem from="1689754129580" duration="4060000" />
       <workItem from="1689762814916" duration="4000" />
       <workItem from="1689919868594" duration="4157000" />
+      <workItem from="1689931400111" duration="63000" />
+      <workItem from="1690180129170" duration="2910000" />
+      <workItem from="1690195163014" duration="4000" />
+      <workItem from="1690265067349" duration="9785000" />
+      <workItem from="1690281366187" duration="6000" />
+      <workItem from="1690351967465" duration="8457000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1688585070202</created>
@@ -312,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689240625161</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="21.07.2023">
+      <created>1689931431298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689931431298</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +389,18 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="06.07.2023" />
     <MESSAGE value="13.07.2023" />
-    <option name="LAST_COMMIT_MESSAGE" value="13.07.2023" />
+    <MESSAGE value="21.07.2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="21.07.2023" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/auth-micro-service/src/main/java/com/sinem/service/AuthService.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
